@@ -1,7 +1,15 @@
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom'
-import { Context } from '../useContext/useContext'
-import linkedin from '../assets/linkedin.svg'
+import { Link, useNavigate } from 'react-router-dom';
+import { Context } from '../useContext/useContext';
+import linkedin from '../assets/linkedin.svg';
+import me from '../assets/me.png';
+import fb from '../assets/fb.svg'
+import git from '../assets/git.svg'
+import insta from '../assets/insta.svg'
+import uplift from '../assets/upliftCert 1.png'
+import Developer from '../assets/code-box-line.svg'
+import digi from '../assets/digi.svg'
+import graphic from '../assets/paint-fill.svg'
 
 const Page = () => {
     const navigate = useNavigate()
@@ -26,9 +34,9 @@ const Page = () => {
                     <div className='flex' style={{gap:'40px'}}>
                     <div className='socialLogo'>
                         <img src={linkedin} className='' alt='Linkdin'/>
-                        <img src="/src/assets/fb.svg" className='' alt='FB'/>
-                        <img src="/src/assets/git.svg" className='logo' alt='Git Hub'/>
-                        <img src="/src/assets/insta.svg" className='' alt='Insta'/>
+                        <img src={fb} className='' alt='FB'/>
+                        <img src={git} className='logo' alt='Git Hub'/>
+                        <img src={insta} className='' alt='Insta'/>
                     </div>
                     <div className='aboutMe'>
                     <h1>MARVIN ALIVIO</h1>
@@ -37,7 +45,7 @@ const Page = () => {
                     </div>
                     </div>
                 </div>
-                <div className='col-5'><img src="./src/assets/me.png" className='me' alt='Me'/></div>
+                <div className='col-5'><img src={me} className='me' alt='Me'/></div>
             </div>
        </section>
        <section className='TRAINING' id='traning'>
@@ -49,7 +57,7 @@ const Page = () => {
 
             </div>
             <div className='col-4'>
-                <img src="./src/assets/upliftCert 1.png" alt='Uplift Cert' className='certImg' />
+                <img src={uplift} alt='Uplift Cert' className='certImg' />
             </div>
         </div>
        </section>
@@ -61,17 +69,17 @@ const Page = () => {
                     <p className='f24'>Extensive experience in building full websites, landing pages, and email marketing campaigns from the ground up. My skill set also includes graphic design using Figma and Adobe Creative Suite, video editing, and designing visually engaging PDF documents.</p>
                     <ul className='ulPods flex'>
                         <li>
-                            <img src="./src/assets/code-box-line.svg" alt='Developer' />
+                            <img src={Developer} alt='Developer' />
                             <h5>Developer</h5>
                             <p>I have 4 years of experience working with Bootstrap, and over 5 years of experience using DUDA. Additionally, I’ve worked as a freelance WordPress developer on Upwork, delivering customized websites for various clients.</p>
                         </li>
                         <li>
-                            <img src="./src/assets/🦆 icon _refresh_.svg" alt='Digital Marketing' />
+                            <img src={digi} alt='Digital Marketing' />
                             <h5>Digital Marketing</h5>
                             <p>4 years of experience designing and developing high-converting landing pages and email marketing campaigns for major clients, including Google, AMD, Lenovo, Dell, Microsoft, and many others.</p>
                         </li>
                         <li>
-                            <img src="./src/assets/paint-fill.svg" alt='Graphic/UI/UX Designer' />
+                            <img src={graphic} alt='Graphic/UI/UX Designer' />
                             <h5>Graphic/UI/UX Designer</h5>
                             <p>I have a foundational understanding of creating web mockups in Figma, and as a web graphic designer, I bring extensive experience with Adobe Creative Suite, particularly Photoshop, Illustrator, and InDesign.</p>
                         </li>
