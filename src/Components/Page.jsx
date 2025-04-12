@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom'
 import { Context } from '../useContext/useContext'
+import linkedin from '../assets/linkedin.svg'
 
 const Page = () => {
     const navigate = useNavigate()
@@ -24,7 +25,7 @@ const Page = () => {
                 <div className='col-7 flex' style={{alignItems:'center'}}>
                     <div className='flex' style={{gap:'40px'}}>
                     <div className='socialLogo'>
-                        <img src="/assets/linkedin.svg" className='' alt='Linkdin'/>
+                        <img src={linkedin} className='' alt='Linkdin'/>
                         <img src="/src/assets/fb.svg" className='' alt='FB'/>
                         <img src="/src/assets/git.svg" className='logo' alt='Git Hub'/>
                         <img src="/src/assets/insta.svg" className='' alt='Insta'/>
