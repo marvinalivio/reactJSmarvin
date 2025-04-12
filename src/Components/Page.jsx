@@ -24,10 +24,10 @@ const Page = () => {
                 <div className='col-7 flex' style={{alignItems:'center'}}>
                     <div className='flex' style={{gap:'40px'}}>
                     <div className='socialLogo'>
-                        <img src="./src/assets/linkedin.svg" className='' alt='Linkdin'/>
-                        <img src="./src/assets/fb.svg" className='' alt='FB'/>
-                        <img src="./src/assets/git.svg" className='logo' alt='Git Hub'/>
-                        <img src="./src/assets/insta.svg" className='' alt='Insta'/>
+                        <img src="/assets/linkedin.svg" className='' alt='Linkdin'/>
+                        <img src="/src/assets/fb.svg" className='' alt='FB'/>
+                        <img src="/src/assets/git.svg" className='logo' alt='Git Hub'/>
+                        <img src="/src/assets/insta.svg" className='' alt='Insta'/>
                     </div>
                     <div className='aboutMe'>
                     <h1>MARVIN ALIVIO</h1>
