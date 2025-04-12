@@ -1,0 +1,45 @@
+@media screen and (max-width: 767px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        padding: 1rem;
+      }
+    
+      .nav-links.open {
+        display: flex;
+      }
+      .nav-links a {
+        color:#fff
+      }
+      .menu-icon {
+        display: block;
+      }
+    .flex {
+        flex-direction: column;
+    }
+
+    .row [class*="col"] {
+    width: 100%
+}
+    .row {
+        max-wdth: 100%
+    }
+
+    h2 {
+        font-size: 32px
+    }
+    .items-center.flex.navContainer {
+        flex-direction: row;
+    }
+    ul.skillList li {
+        flex-basis: 100% !important
+    }
+    ul.expList {
+      column-count: 1;
+  }
+    
+  }
