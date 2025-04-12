@@ -29,7 +29,7 @@ const Page = () => {
     return (
         <>
        <section className='hero' style={{paddingBlock:'0'}}>
-            <div className='row flex'>
+            <div className='row flex' style={{paddingBlock:0}}>
                 <div className='col-7 flex' style={{alignItems:'center'}}>
                     <div className='flex' style={{gap:'40px'}}>
                     <div className='socialLogo'>

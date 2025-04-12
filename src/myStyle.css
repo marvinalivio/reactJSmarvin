@@ -30,7 +30,7 @@ body {
   .nav-links {
     display: flex;
     gap: 1.5rem;
-    
+
   }
   
   .nav-links a {
@@ -118,7 +118,8 @@ h3 {
     background: url(./src/assets/bodyBG.jpg)repeat;
     height: calc(100vh - 130px);
     display: flex;
-    overflow: hidden
+    overflow: hidden;
+    align-items: stretch;
 }
 .hero p {
     font-size: 24px;
