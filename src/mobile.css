@@ -9,6 +9,9 @@
         padding: 1rem;
       }
     
+      .hero {
+        height: auto
+      }
       .nav-links.open {
         display: flex;
       }
@@ -21,12 +24,21 @@
     .flex {
         flex-direction: column;
     }
-
+    section.hero .row .flex {
+      flex-direction: column-reverse;
+  }
+  .socialLogo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
     .row [class*="col"] {
     width: 100%
 }
     .row {
-        max-wdth: 100%
+        max-width: 100%
     }
 
     h2 {

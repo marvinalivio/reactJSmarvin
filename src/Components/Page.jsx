@@ -15,16 +15,16 @@ const Page = () => {
     const navigate = useNavigate()
     const { userLoggedIn } = Context();
     const skills = [
-        {name: 'HTML', num: '92'},
-        {name: 'CSS', num: '92'},
-        {name: 'Bootstrap', num: '92'},
-        {name: 'DUDA', num: '90'},
-        {name: 'Word[ress', num: '82'},
-        {name: 'Figma', num: '75'},
-        {name: 'PS', num: '86'},
-        {name: 'ReactJs', num: '70'},
-        {name: 'GitHub', num: '73'},
-        {name: 'MongoDB', num: '71'}
+        {name: 'HTML', num: '92', id:'1'},
+        {name: 'CSS', num: '92', id:'2'},
+        {name: 'Bootstrap', num: '92', id:'3'},
+        {name: 'DUDA', num: '90', id:'4'},
+        {name: 'Word[ress', num: '82', id:'5'},
+        {name: 'Figma', num: '75', id:'6'},
+        {name: 'PS', num: '86', id:'7'},
+        {name: 'ReactJs', num: '70', id:'8'},
+        {name: 'GitHub', num: '73', id:'9'},
+        {name: 'MongoDB', num: '71', id:'10'}
     ]
     return (
         <>
@@ -97,7 +97,7 @@ const Page = () => {
                     I'm also exploring the MERN stack and have beginner-level experience with MongoDB, Express, React, and NodeJs. In addition to coding, I use tools like Figma for design collaboration and Git for version control to streamline my workflow and keep projects organized</p>
                     <ul className='skillList'>
                         {skills.map(skill => (
-                            <li key={skill.num}><span style={{width:`${skill.num}%`}}><i>{skill.name}</i><b>{skill.num}%</b></span></li>
+                            <li key={skill.id}><span style={{width:`${skill.num}%`}}><i>{skill.name}</i><b>{skill.num}%</b></span></li>
                         )
                         )}
                     </ul>
