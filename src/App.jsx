@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import './myStyle.css'
 import './mobile.css'
+import './animation.css'
 import Header from './Components/Header'
 import { UserProvider } from './useContext/useContext'
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
