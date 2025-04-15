@@ -7,7 +7,6 @@ import logo from '../assets/logo.png';
 
 const Header = () => {
     const navigate = useNavigate()
-    const { userLoggedIn } = Context();
     const [isOpen, setIsOpen] = useState(false);
     const [isActive, setIsActive] = useState('/');
     const [isShrunk, setIsShrunk] = useState(false);
