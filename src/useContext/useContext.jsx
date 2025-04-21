@@ -21,7 +21,7 @@ export const UserProvider = ({ children }) => {
     useEffect(() => {
         const fetchData = async () => {
           try {
-            const response = await axios.get("https://marvinbackend.onrender.com/");
+            const response = await axios.get("http://localhost:3000/");
             setData(response.data || []);
             console.log(response)
           } catch (error) {
