@@ -44,6 +44,7 @@ const Header = () => {
                             <a href="#services" className={isActive === '#services' ? 'active' : ''} onClick={() => handleLinkClick('#services')}>Services</a>
                             <a href="#skills" className={isActive === '#services' ? 'active' : ''} onClick={() => handleLinkClick('#skills')}>Skills</a>
                             <a href="#experience" className={isActive === '#experience' ? 'active' : ''} onClick={() => handleLinkClick('#experience')}>Work Experience</a>
+                            <a href="#project" className={isActive === '#project' ? 'active' : ''} onClick={() => handleLinkClick('#project')}>Projects</a>
                             <a href="/contact">Contact</a>
                         </div>
                         <div className="menu-icon" onClick={toggleMenu}>
