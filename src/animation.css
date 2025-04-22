@@ -1,6 +1,6 @@
 .reactLogoFooter {
-	-webkit-animation-name: rotate-center 9s ease-in-out infinite alternate both;
-	        animation-name: rotate-center 9s ease-in-out infinite alternate both;
+	-webkit-animation: rotate-center 9s ease-in-out infinite alternate both;
+	        animation: rotate-center 9s ease-in-out infinite alternate both;
 }
  @-webkit-keyframes rotate-center {
     0% {
