@@ -15,7 +15,7 @@ import graphic from '../assets/paint-fill.svg'
 const Page = () => {
     const {data} =  Context();
     const [currentPage, setCurrentPage] = useState(1);
-    const itemsPerPage = 10;
+    const itemsPerPage = 11;
     const navigate = useNavigate()
     const { userLoggedIn } = Context();
     const [isVisible, setIsVisible] = useState(false);

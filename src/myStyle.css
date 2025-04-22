@@ -234,6 +234,10 @@ ul.expList em {
     padding: 20px;
     position: relative;
     display:flex;
+    justify-content:center;
+}
+.podsProj:nth-of-type(even) {
+    flex: 20 0 25%;
 }
 .imgContainer {
     mix-blend-mode: luminosity;
@@ -253,6 +257,10 @@ a.linkPods {
     top:0;
     left:0
 
+}
+h3.titleProd {
+    font-size: 20px;
+    padding: 15px
 }
 .hoverDetails {
     position: absolute;
