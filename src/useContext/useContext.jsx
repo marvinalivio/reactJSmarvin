@@ -16,12 +16,16 @@ export const UserProvider = ({ children }) => {
     const [currentUser, setCurrentUser] = useState(null);
     const [userLoggedIn, setUserLoggedIn] = useState(false);
     const [isEmailUser, setIsEmailUser] = useState(false);
+     const [isOpen, setIsOpen] = useState(false);
+        const [isActive, setIsActive] = useState('/');
+        const [isShrunk, setIsShrunk] = useState(false);
 
 
     useEffect(() => {
         const fetchData = async () => {
           try {
-            const response = await axios.get("http://localhost:3000/");
+            const apiURL = import.meta.env.VITE_API_URL;
+            const response = await axios.get(apiURL);
             setData(response.data || []);
             console.log(response)
           } catch (error) {
@@ -67,7 +71,9 @@ export const UserProvider = ({ children }) => {
         movieData,
         setMovieData,
         currentUser, 
-        setCurrentUser
+        setCurrentUser,
+        isShrunk,
+        setIsShrunk
         // accessProtectedRoute
     };
 

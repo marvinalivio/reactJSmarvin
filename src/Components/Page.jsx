@@ -1,4 +1,5 @@
-import React from 'react';
+
+import { React, useEffect, useState, useRef, useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Context } from '../useContext/useContext';
 import linkedin from '../assets/linkedin.svg';
@@ -12,20 +13,51 @@ import digi from '../assets/digi.svg'
 import graphic from '../assets/paint-fill.svg'
 
 const Page = () => {
+    const {data} =  Context();
+    const [currentPage, setCurrentPage] = useState(1);
+    const itemsPerPage = 3;
     const navigate = useNavigate()
     const { userLoggedIn } = Context();
+    const [isVisible, setIsVisible] = useState(false);
+    const targetRef = useRef(null);
     const skills = [
         {name: 'HTML', num: '92', id:'1'},
         {name: 'CSS', num: '92', id:'2'},
         {name: 'Bootstrap', num: '92', id:'3'},
         {name: 'DUDA', num: '90', id:'4'},
-        {name: 'Word[ress', num: '82', id:'5'},
+        {name: 'Wordpress', num: '82', id:'5'},
         {name: 'Figma', num: '75', id:'6'},
         {name: 'PS', num: '86', id:'7'},
         {name: 'ReactJs', num: '70', id:'8'},
         {name: 'GitHub', num: '73', id:'9'},
         {name: 'MongoDB', num: '71', id:'10'}
     ]
+
+    useEffect(() => {
+        const scrollActive = () => {
+          if (targetRef.current) {
+            const rect = targetRef.current.getBoundingClientRect();
+            console.log(rect); // Log the rect object to see its properties
+            setIsVisible(rect.top <= 0); // Adjust as needed
+          }
+        };
+      
+        window.addEventListener('scroll', scrollActive);
+        
+        return () => window.removeEventListener('scroll', scrollActive);
+      }, []);
+
+const dataList = data?.dataList || [];
+// Calculate total pages
+const totalPages = Math.ceil(dataList.length / itemsPerPage);
+
+// Get items for the current page
+const paginatedData = dataList.slice(
+    (currentPage - 1) * itemsPerPage,
+    currentPage * itemsPerPage
+);
+
+
     return (
         <>
        <section className='hero' style={{paddingBlock:'0'}}>
@@ -88,7 +120,7 @@ const Page = () => {
                 </div>
             </div>
         </section>
-        <section className='skillsCLass' id='skills'>
+        <section className={`skillsCLass ${isVisible ? 'activeRow' : ''}`} id='skills'>
             <div className='row flex'>
                 <div className='col-12'>
                     <h2>Skill</h2>
@@ -97,12 +129,12 @@ const Page = () => {
                     I'm also exploring the MERN stack and have beginner-level experience with MongoDB, Express, React, and NodeJs. In addition to coding, I use tools like Figma for design collaboration and Git for version control to streamline my workflow and keep projects organized</p>
                     <ul className='skillList'>
                         {skills.map(skill => (
-                            <li key={skill.id}><span style={{width:`${skill.num}%`}}><i>{skill.name}</i><b>{skill.num}%</b></span></li>
+                            <li key={skill.id} id={skill.id}><span className='barClass'><i>{skill.name}</i><b>%</b><em style={{maxWidth:`${skill.num}%`}}></em></span></li>
                         )
                         )}
                     </ul>
                 </div>
-            </div>
+            </div> 
         </section>
         <section className='exp' id='experience'>
             <div className='row flex'>
@@ -122,6 +154,51 @@ const Page = () => {
                         Lörem ipsum darade saska kesade. Nisade pospenungen i ogir, om än beliga. Gagaliga ena. Hexak buminåliga i sunör. Gist supranyrament dirade pugisk. Fad kövis föss. Vapp krorade androtopi: preliga. 
                         </li>
                     </ul>
+                </div>
+            </div>
+        </section>
+        <section className='proj' id='project'>
+            <div className='row flex'>
+                <div className='col-12'>
+                <h2>Project</h2>
+                <div className="flex projPods">
+                {paginatedData.map(item => (
+                <div key={item._id} id={item._id} className='podsProj'>
+                    {item.data.map(inner => (
+                        <div key={inner._id} className='podsContainer'>
+                            <a href={inner.link} className='linkPods' target="_blank" rel="noopener noreferrer"></a>
+                            <div className="imgContainer"><img src={inner.img} alt={inner.title} /></div>
+                            <div className="hoverDetails">
+                                <div>
+                                    <h3 className='titleProd'>{inner.title}</h3>
+                                    <p className='clickMe'>View</p>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            ))}
+
+            {/* Pagination controls */}
+            <div className="pagination">
+                <button
+                    onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
+                    disabled={currentPage === 1}
+                >
+                    Prev
+                </button>
+                <span>Page {currentPage} of {totalPages}</span>
+                <button
+                    onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
+                    disabled={currentPage === totalPages}
+                >
+                    Next
+                </button>
+            </div>
+                </div>
+                
+
+
                 </div>
             </div>
         </section>

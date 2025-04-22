@@ -47,8 +47,8 @@
     .items-center.flex.navContainer {
         flex-direction: row;
     }
-    ul.skillList li {
-        flex-basis: 100% !important
+    ul.skillList {
+        column-count:1
     }
     ul.expList {
       column-count: 1;

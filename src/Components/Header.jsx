@@ -10,6 +10,7 @@ const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [isActive, setIsActive] = useState('/');
     const [isShrunk, setIsShrunk] = useState(false);
+    
     useEffect(() => {
         const handleScroll = () => {
             if (window.scrollY > 50) {

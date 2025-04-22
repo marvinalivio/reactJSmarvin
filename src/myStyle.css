@@ -167,21 +167,30 @@ ul.ulPods li img {
 /* SKILLS */
 
 ul.skillList {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    margin-top:40px
+    margin-top: 40px;
+    column-count: 2;
+    gap: 40px;
 }
 ul.skillList li {
-    flex: 0 0 49%;
-    background: #F0F0F0;
+    background: #f0f0f0;
     border: 3px solid #fff;
-    outline: 1px solid #f0f0f0
+    outline: 1px solid #f0f0f0;
+    margin-bottom: 10px;
 }
-ul.skillList span {
+ul.skillList span.barClass {
     display: flex;
     padding: 5px 20px;
+    position: relative;
+    z-index: 1;
+}
+ul.skillList span.barClass em {
     background: #95e7ea;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    z-index: -1;
+    animation: run 10s linear
 }
 ul.skillList span *{
     font-style: normal;
@@ -210,4 +219,73 @@ ul.expList span, ul.expList em {
 }
 ul.expList em {
     margin-bottom: 20px
+}
+
+
+/* Project*/
+.projPods {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+.podsProj {
+    flex: 1 5 24%;
+    background: #ededee;
+    padding: 20px;
+    position: relative;
+    display:flex;
+}
+.imgContainer {
+    mix-blend-mode: luminosity;
+}
+.imgContainer img {
+    object-fit: contain;
+    width: 72%;
+    height: auto;
+    margin: auto;
+}
+a.linkPods {
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+    z-index:1;
+    top:0;
+    left:0
+
+}
+.hoverDetails {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    background: rgba(0 0 0 / 70%);
+    opacity:0;
+    transition: .3s ease-in-out
+}
+.hoverDetails * {
+    color: #fff;
+    text-align: center;
+}
+.podsContainer:hover .hoverDetails {
+    opacity: 1;
+}
+.podsContainer:hover .imgContainer {
+    mix-blend-mode: normal;
+}
+.podsContainer {
+    align-self: center;
+}
+p.clickMe {
+    font-size: 16px;
+}
+.pagination {
+    flex-basis: 100%;
+}
+.pagination span {
+    margin-inline: 15px;
 }

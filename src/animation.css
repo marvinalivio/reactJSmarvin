@@ -23,3 +23,181 @@
     }
   }
   
+
+
+
+  @property --num {
+    syntax: "<integer>";
+    initial-value: 0;
+    inherits: false;
+  }
+  
+  ul.skillList b {
+    animation: counter 10s ;
+    counter-reset: num var(--num);
+
+  }
+
+  ul.skillList li#32 b {
+    animation: counter2 10s forwards;
+  }
+
+  ul.skillList li#33 b {
+    animation: counter3 10s ;
+  }
+  ul.skillList li#34 b {
+    animation: counter3 10s ;
+  }
+  ul.skillList li#35 b {
+    animation: counter4 10s ;
+  }
+  ul.skillList li#36 b {
+    animation: counter5 10s ;
+  }
+  ul.skillList li#37 b {
+    animation: counter6 10s ;
+  }
+  ul.skillList li#38 b {
+    animation: counter7 10s ;
+  }
+  ul.skillList li#39 b {
+    animation: counter8 10s ;
+  }
+  ul.skillList li#310 b {
+    animation: counter93 10s ;
+  }
+  ul.skillList li#311 b {
+    animation: counter10 10s ;
+  }
+
+  ul.skillList b::before {
+    content: counter(num);
+  }
+  ul.skillList b::before {
+    content: counter2(num);
+  }
+  ul.skillList b::before {
+    content: counter3(num);
+  }
+  ul.skillList b::before {
+    content: counter4(num);
+  }
+  ul.skillList b::before {
+    content: counter5(num);
+  }
+  ul.skillList b::before {
+    content: counter6(num);
+  }
+  ul.skillList b::before {
+    content: counter7(num);
+  }
+  ul.skillList b::before {
+    content: counter8(num);
+  }
+  ul.skillList b::before {
+    content: counter9(num);
+  }
+  ul.skillList b::before {
+    content: counter10(num);
+  }
+ 
+
+  @keyframes counter {
+    from {
+      --num: 0;
+    }
+    to {
+      --num: 92;
+    }
+  }
+
+  @keyframes counter2 {
+    0% {
+      --num: 0;
+    }
+    100% {
+      --num: 92;
+    }
+  }
+
+  @keyframes counter3 {
+    from {
+      --num: 0;
+    }
+    to {
+      --num: 82;
+    }
+  }
+
+  @keyframes counter4 {
+    from {
+      --num: 0;
+    }
+    to {
+      --num: 86;
+    }
+  }
+
+  @keyframes counter5 {
+    from {
+      --num: 0;
+    }
+    to {
+      --num: 73;
+    }
+  }
+
+  @keyframes counter6 {
+    from {
+      --num: 0;
+    }
+    to {
+      --num: 92;
+    }
+  }
+
+  @keyframes counter7{
+    from {
+      --num: 0;
+    }
+    to {
+      --num: 90;
+    }
+  }
+
+  @keyframes counter8 {
+    from {
+      --num: 0;
+    }
+    to {
+      --num: 75;
+    }
+  }
+
+  @keyframes counter9 {
+    from {
+      --num: 0;
+    }
+    to {
+      --num: 70;
+    }
+  }
+  @keyframes counter10 {
+    from {
+      --num: 0;
+    }
+    to {
+      --num: 71;
+    }
+  }
+
+
+  @-webkit-keyframes run {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 100%;
+    }
+
+  }
