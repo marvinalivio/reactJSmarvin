@@ -1,6 +1,6 @@
 .reactLogoFooter {
-	-webkit-animation: rotate-center 9s ease-in-out infinite alternate both;
-	        animation: rotate-center 9s ease-in-out infinite alternate both;
+	-webkit-animation-name: rotate-center 9s ease-in-out infinite alternate both;
+	        animation-name: rotate-center 9s ease-in-out infinite alternate both;
 }
  @-webkit-keyframes rotate-center {
     0% {
@@ -32,49 +32,48 @@
     inherits: false;
   }
   
-  ul.skillList b {
-    animation: counter 10s ;
+  ul.skillList .ulClass b {
+    animation-name:  counter;
     counter-reset: num var(--num);
+    animation-fill-mode: forwards;
+    animation-duration: 10s;
 
   }
 
-  ul.skillList li#32 b {
-    animation: counter2 10s forwards;
+  ul.skillList .ul2 b {
+    animation-name: counter2;
   }
 
-  ul.skillList li#33 b {
-    animation: counter3 10s ;
+  ul.skillList .ul3 b {
+    animation-name: counter3;
   }
-  ul.skillList li#34 b {
-    animation: counter3 10s ;
+  ul.skillList .ul4 b {
+    animation-name: counter4;
   }
-  ul.skillList li#35 b {
-    animation: counter4 10s ;
+  ul.skillList .ul5 b {
+    animation-name: counter5;
   }
-  ul.skillList li#36 b {
-    animation: counter5 10s ;
+  ul.skillList .ul6 b {
+    animation-name: counter6;
   }
-  ul.skillList li#37 b {
-    animation: counter6 10s ;
+  ul.skillList .ul7 b {
+    animation-name: counter7;
   }
-  ul.skillList li#38 b {
-    animation: counter7 10s ;
+  ul.skillList .ul8 b {
+    animation-name: counter8;
   }
-  ul.skillList li#39 b {
-    animation: counter8 10s ;
+  ul.skillList .ul9 b {
+    animation-name: counter9;
   }
-  ul.skillList li#310 b {
-    animation: counter93 10s ;
-  }
-  ul.skillList li#311 b {
-    animation: counter10 10s ;
+  ul.skillList .ul10 b {
+    animation-name: counter10;
   }
 
   ul.skillList b::before {
     content: counter(num);
   }
   ul.skillList b::before {
-    content: counter2(num);
+    content: counter2(num) !important;
   }
   ul.skillList b::before {
     content: counter3(num);
@@ -103,89 +102,68 @@
  
 
   @keyframes counter {
-    from {
-      --num: 0;
-    }
     to {
       --num: 92;
     }
   }
 
   @keyframes counter2 {
-    0% {
-      --num: 0;
-    }
+   
     100% {
       --num: 92;
     }
   }
 
   @keyframes counter3 {
-    from {
-      --num: 0;
-    }
+    
     to {
       --num: 82;
     }
   }
 
   @keyframes counter4 {
-    from {
-      --num: 0;
-    }
+   
     to {
       --num: 86;
     }
   }
 
   @keyframes counter5 {
-    from {
-      --num: 0;
-    }
+   
     to {
       --num: 73;
     }
   }
 
   @keyframes counter6 {
-    from {
-      --num: 0;
-    }
+    
     to {
       --num: 92;
     }
   }
 
   @keyframes counter7{
-    from {
-      --num: 0;
-    }
+   
     to {
       --num: 90;
     }
   }
 
   @keyframes counter8 {
-    from {
-      --num: 0;
-    }
+   
     to {
       --num: 75;
     }
   }
 
   @keyframes counter9 {
-    from {
-      --num: 0;
-    }
+   
     to {
       --num: 70;
     }
   }
   @keyframes counter10 {
-    from {
-      --num: 0;
-    }
+    
     to {
       --num: 71;
     }

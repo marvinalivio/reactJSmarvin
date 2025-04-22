@@ -129,7 +129,7 @@ const paginatedData = dataList.slice(
                     I'm also exploring the MERN stack and have beginner-level experience with MongoDB, Express, React, and NodeJs. In addition to coding, I use tools like Figma for design collaboration and Git for version control to streamline my workflow and keep projects organized</p>
                     <ul className='skillList'>
                         {skills.map(skill => (
-                            <li key={skill.id} id={skill.id}><span className='barClass'><i>{skill.name}</i><b>%</b><em style={{maxWidth:`${skill.num}%`}}></em></span></li>
+                            <li key={skill.id} id={skill.id} className={`ul${skill.id} ulClass`}><span className='barClass'><i>{skill.name}</i><b>%</b><em style={{maxWidth:`${skill.num}%`}}></em></span></li>
                         )
                         )}
                     </ul>
