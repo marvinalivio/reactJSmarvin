@@ -150,17 +150,17 @@ const paginatedData = dataList.slice(
         <section className='exp' id='experience'>
             <div className='row flex'>
                 <div className='col-12'>
-                    <h2>Work Experieced</h2>
+                    <h2>Work Experience</h2>
                     <ul className='expList'>
                         <li>
                         <span style={{fontSize:'30px'}}><b>Web Developer</b></span>
-                        <span>Company Name</span>
+                        <span>EMAPTA</span>
                         <em>2021 - Present</em>
                         Lörem ipsum darade saska kesade. Nisade pospenungen i ogir, om än beliga. Gagaliga ena. Hexak buminåliga i sunör. Gist supranyrament dirade pugisk. Fad kövis föss. Vapp krorade androtopi: preliga. 
                         </li>
                         <li>
                         <span style={{fontSize:'30px'}}><b>Web Developer</b></span>
-                        <span>Company Name</span>
+                        <span>TATA Consultancy Services</span>
                         <em>2013 - 2020</em>
                         Lörem ipsum darade saska kesade. Nisade pospenungen i ogir, om än beliga. Gagaliga ena. Hexak buminåliga i sunör. Gist supranyrament dirade pugisk. Fad kövis föss. Vapp krorade androtopi: preliga. 
                         </li>
