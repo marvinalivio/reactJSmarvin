@@ -11,6 +11,8 @@ import uplift from '../assets/upliftCert 1.png'
 import Developer from '../assets/code-box-line.svg'
 import digi from '../assets/digi.svg'
 import graphic from '../assets/paint-fill.svg'
+import reactImg from '../assets/react.svg';
+import jsImg from '../assets/js.svg'
 
 const Page = () => {
     const {data} =  Context();
@@ -85,7 +87,16 @@ const paginatedData = dataList.slice(
             <div className='col-8 myAuto pr-10'>
             <h2>TRAINING/CERTIFICATE</h2>
             <p className='f24'>I completed a full-stack development course at Uplift Code Camp, where I gained hands-on experience building end-to-end web applications. During the program, I worked on projects using Vanilla JavaScript, ReactJS, Node.js, with Express and MongoDB powering the backend.</p>
-            <p className='f24'>Here's a highlight from one of the projects I contributed to:</p>
+            <p className='f24' style={{marginBottom:'25px'}}>Here's a highlight from one of the projects I contributed to:</p>
+            <hr style={{color:'#c9c9c9', maxWidth:'80%'}}/>
+            <div className="highLights">
+            <img src={reactImg} className='' alt='FB'/>
+            <p>ReactJs Project</p>
+            </div>
+            <div className="highLights">
+            <img src={jsImg} className='' alt='FB'/>
+            <p>Vanila Javascript Project</p>
+            </div>
 
             </div>
             <div className='col-4'>

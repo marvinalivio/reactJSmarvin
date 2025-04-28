@@ -53,5 +53,7 @@
     ul.expList {
       column-count: 1;
   }
-    
+  img.me {
+    display: none;
+}
   }

@@ -164,6 +164,21 @@ ul.ulPods li img {
     margin-bottom: 20px
 }
 
+.highLights {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: flex-start;
+    margin-block: 20px;
+}
+.highLights img {
+    object-fit: contain;
+    width: 54px;
+}
+.highLights p {
+    width: 100%;
+}
+
 /* SKILLS */
 
 ul.skillList {
@@ -296,4 +311,24 @@ p.clickMe {
 }
 .pagination span {
     margin-inline: 15px;
+}
+
+.bactToTop {
+        position: fixed;
+        bottom:40px;
+        right: 40px;
+        padding: 10px 20px;
+        font-size: 18px;
+        background-color: #2ad0d6;
+        color: #fff;
+        border: 0 !important;
+        border-radius: 5px;
+        cursor: pointer;
+        z-index: 1000;
+        font-weight: bold;
+        opacity: .4;
+        outline: 0 !important
+    }
+.bactToTop:hover {
+    opacity: 1
 }

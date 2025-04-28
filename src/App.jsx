@@ -9,7 +9,8 @@ import Header from './Components/Header'
 import { UserProvider } from './useContext/useContext'
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Footer from './Components/Footer';
-import Page from './Components/Page'
+import Page from './Components/Page';
+import BackToTopButton from './Components/backToTopButton'
 
 const App = () => {
     return (
@@ -19,6 +20,7 @@ const App = () => {
           <Routes>
             <Route path="*" element={<Page />} />
           </Routes>
+          <BackToTopButton />
           <Footer />
         </Router>
       </UserProvider>
