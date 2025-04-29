@@ -67,7 +67,7 @@ const paginatedData = dataList.slice(
                 <div className='col-7 flex' style={{alignItems:'center'}}>
                     <div className='flex' style={{gap:'40px'}}>
                     <div className='socialLogo'>
-                        <img src={linkedin} className='' alt='Linkdin'/>
+                        <a href='https://www.linkedin.com/in/marvin-alivio/' target='_blank'> <img src={linkedin} className='' alt='Linkdin'/></a>
                         <img src={fb} className='' alt='FB'/>
                         <img src={git} className='logo' alt='Git Hub'/>
                         <img src={insta} className='' alt='Insta'/>
