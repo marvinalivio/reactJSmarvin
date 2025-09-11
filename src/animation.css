@@ -68,6 +68,12 @@
   ul.skillList .ul10 b {
     animation-name: counter10;
   }
+  ul.skillList .ul11 b {
+    animation-name: counter11;
+  }
+  ul.skillList .ul12 b {
+    animation-name: counter12;
+  }
 
   ul.skillList b::before {
     content: counter(num);
@@ -99,7 +105,12 @@
   ul.skillList b::before {
     content: counter10(num);
   }
- 
+  ul.skillList b::before {
+    content: counter11(num);
+  }
+  ul.skillList b::before {
+    content: counter12(num);
+  }
 
   @keyframes counter {
     to {
@@ -138,21 +149,21 @@
   @keyframes counter6 {
     
     to {
-      --num: 92;
+      --num: 75;
     }
   }
 
   @keyframes counter7{
    
     to {
-      --num: 90;
+      --num: 86;
     }
   }
 
   @keyframes counter8 {
    
     to {
-      --num: 75;
+      --num: 73;
     }
   }
 
@@ -165,10 +176,21 @@
   @keyframes counter10 {
     
     to {
-      --num: 71;
+      --num: 70;
     }
   }
-
+  @keyframes counter11 {
+    
+    to {
+      --num: 70;
+    }
+  }
+  @keyframes counter12 {
+    
+    to {
+      --num: 70;
+    }
+  }
 
   @-webkit-keyframes run {
     0% {
@@ -179,3 +201,4 @@
     }
 
   }
+

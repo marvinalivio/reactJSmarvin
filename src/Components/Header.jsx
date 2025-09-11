@@ -42,7 +42,7 @@ const Header = () => {
                             <a href="/" className={isActive === '/' ? 'active' : ''} onClick={() => handleLinkClick('/')}>Home</a>
                             <a href="#traning" className={isActive === '#traning' ? 'active' : ''} onClick={() => handleLinkClick('#traning')}>Training</a>
                             <a href="#services" className={isActive === '#services' ? 'active' : ''} onClick={() => handleLinkClick('#services')}>Services</a>
-                            <a href="#skills" className={isActive === '#services' ? 'active' : ''} onClick={() => handleLinkClick('#skills')}>Skills</a>
+                            <a href="#skills" className={isActive === '#skills' ? 'active' : ''} onClick={() => handleLinkClick('#skills')}>Skills</a>
                             <a href="#experience" className={isActive === '#experience' ? 'active' : ''} onClick={() => handleLinkClick('#experience')}>Work Experience</a>
                             <a href="#project" className={isActive === '#project' ? 'active' : ''} onClick={() => handleLinkClick('#project')}>Projects</a>
                             {/* <a href="/contact">Contact</a> */}

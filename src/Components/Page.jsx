@@ -27,12 +27,14 @@ const Page = () => {
         {name: 'CSS', num: '92', id:'2'},
         {name: 'Bootstrap', num: '92', id:'3'},
         {name: 'DUDA', num: '90', id:'4'},
-        {name: 'Wordpress', num: '82', id:'5'},
+        {name: 'Wordpress', num: '73', id:'5'},
         {name: 'Figma', num: '75', id:'6'},
         {name: 'PS', num: '86', id:'7'},
-        {name: 'ReactJs', num: '70', id:'8'},
-        {name: 'GitHub', num: '73', id:'9'},
-        {name: 'MongoDB', num: '71', id:'10'}
+        {name: 'GitHub', num: '73', id:'8'},
+        {name: 'MongoDB', num: '70', id:'9'},
+        {name: 'Express JS', num: '70', id:'10'},
+        {name: 'ReactJs', num: '70', id:'11'},
+        {name: 'NodeJS', num: '70', id:'12'}
     ]
 
     useEffect(() => {
@@ -69,7 +71,7 @@ const paginatedData = dataList.slice(
                     <div className='socialLogo'>
                         <a href='https://www.linkedin.com/in/marvin-alivio/' target='_blank'> <img src={linkedin} className='' alt='Linkdin'/></a>
                         <img src={fb} className='' alt='FB'/>
-                        <img src={git} className='logo' alt='Git Hub'/>
+                        <a href='https://github.com/marvinalivio/' target='_blank'> <img src={git} className='logo' alt='Git Hub'/></a>
                         <img src={insta} className='' alt='Insta'/>
                     </div>
                     <div className='aboutMe'>
@@ -84,22 +86,22 @@ const paginatedData = dataList.slice(
        </section>
        <section className='TRAINING' id='traning'>
         <div className='row flex'>
-            <div className='col-8 myAuto pr-10'>
+            <div className='col-7 myAuto pr-10'>
             <h2>TRAINING/CERTIFICATE</h2>
             <p className='f24'>I completed a full-stack development course at Uplift Code Camp, where I gained hands-on experience building end-to-end web applications. During the program, I worked on projects using Vanilla JavaScript, ReactJS, Node.js, with Express and MongoDB powering the backend.</p>
             <p className='f24' style={{marginBottom:'25px'}}>Here's a highlight from one of the projects I contributed to:</p>
             <hr style={{color:'#c9c9c9', maxWidth:'80%'}}/>
             <div className="highLights">
             <img src={reactImg} className='' alt='FB'/>
-            <p>ReactJs Project</p>
+            <p><a href='https://p3-react.netlify.app/' target='_blank'>ReactJs Project</a></p>
             </div>
             <div className="highLights">
             <img src={jsImg} className='' alt='FB'/>
-            <p>Vanila Javascript Project</p>
+            <p><a href='https://js-api-app2.netlify.app/' target='_blank'> Vanila Javascript Project</a></p>
             </div>
 
             </div>
-            <div className='col-4'>
+            <div className='col-5'>
                 <img src={uplift} alt='Uplift Cert' className='certImg' />
             </div>
         </div>

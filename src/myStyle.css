@@ -36,8 +36,25 @@ body {
   .nav-links a {
     color: #212121;
     text-decoration: none;
+    position:relative;
+    font-size:24px
   }
-  
+  .nav-links a:before {
+    content: '';
+    height:1px;
+    width:100%;
+    position:absolute;
+    bottom:0;
+    left:0;
+    border-bottom:3px solid #212121;
+    transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+  }
+  .nav-links a:hover::before,
+  .nav-links a.active:before {
+    transform: scaleX(1);
+  }
   .menu-icon {
     display: none;
     font-size: 1.5rem;
@@ -88,6 +105,7 @@ h5 {
 .navContainer {
     justify-content: space-between;
 }
+
 .logo {
     width: 100px;
     object-fit: contain;
@@ -144,6 +162,8 @@ img.me {
 }
 img.certImg {
     box-shadow: 0 4px 4px rgba(0 0 0 / 25%);
+    object-fit: cover;
+    width: 100%;
 }
 .services {
     background: #f8f8f8
@@ -227,7 +247,7 @@ ul.expList {
     font-size: 24px
 }
 ul.expList li {
-    margin-block: 20px
+    /* margin-block: 20px */
 }
 ul.expList span, ul.expList em {
     display: block;
