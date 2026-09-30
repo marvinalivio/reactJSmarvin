@@ -77,7 +77,8 @@ const paginatedData = dataList.slice(
                     <div className='aboutMe'>
                     <h1>MARVIN ALIVIO</h1>
                     <h3>WEB DEVELOPER</h3>
-                    <p>I'm a web developer with over five years of experience in the digital marketing industry, specializing in responsive landing pages and websites for top-tier clients like Google, Microsoft, Dell, and Lenovo.</p>
+                    <p>Web Developer with 6+ years of experience building incentive websites, landing pages, HTML emails, and web content for clients including P&G, Google, Microsoft, Dell, Lenovo, and Staples. Skilled in React, TypeScript, JavaScript, Git, APIs, responsive development, QA, and working with existing codebases. Experienced in reusable components, troubleshooting, refactoring, and AI-assisted development using Claude, with additional training in Node.js, databases, and backend development.
+</p>
                     </div>
                     </div>
                 </div>
@@ -158,13 +159,13 @@ const paginatedData = dataList.slice(
                         <span style={{fontSize:'30px'}}><b>Web Developer</b></span>
                         <span>EMAPTA</span>
                         <em>2021 - Present</em>
-                        Lörem ipsum darade saska kesade. Nisade pospenungen i ogir, om än beliga. Gagaliga ena. Hexak buminåliga i sunör. Gist supranyrament dirade pugisk. Fad kövis föss. Vapp krorade androtopi: preliga. 
+                        Web Developer at EXTU with 6+ years of experience developing and maintaining incentive websites, landing pages, HTML emails, and web content for major brands including P&G, Google, Microsoft, Lenovo, Dell, and Staples.
                         </li>
                         <li>
                         <span style={{fontSize:'30px'}}><b>Web Developer</b></span>
                         <span>TATA Consultancy Services</span>
                         <em>2013 - 2020</em>
-                        Lörem ipsum darade saska kesade. Nisade pospenungen i ogir, om än beliga. Gagaliga ena. Hexak buminåliga i sunör. Gist supranyrament dirade pugisk. Fad kövis föss. Vapp krorade androtopi: preliga. 
+                        Built and maintained responsive websites for thousands of UK small businesses, converting PSD designs into pixel-accurate HTML/CSS. Performed cross-browser and device testing, selected brand-appropriate imagery, and implemented client-requested revisions.
                         </li>
                     </ul>
                 </div>
