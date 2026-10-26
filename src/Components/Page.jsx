@@ -1,5 +1,5 @@
 
-import { React, useEffect, useState, useRef, useContext } from 'react';
+import React, { useEffect, useState, useRef, useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Context } from '../useContext/useContext';
 import linkedin from '../assets/linkedin.svg';
@@ -51,16 +51,36 @@ const Page = () => {
         return () => window.removeEventListener('scroll', scrollActive);
       }, []);
 
-const dataList = data?.dataList || [];
-// Calculate total pages
-const totalPages = Math.ceil(dataList.length / itemsPerPage);
-
-// Get items for the current page
-const paginatedData = dataList.slice(
-    (currentPage - 1) * itemsPerPage,
-    currentPage * itemsPerPage
-);
-
+      
+      const categoryOrder = ['RewardTrax', 'Duda', 'Landing Page'];
+      const norm = (s) => String(s || '').trim().toLowerCase();
+      
+      const groups = data?.dataList || [];
+      
+      const allProjects = groups.flatMap((group, gi) => {
+          const inner = Array.isArray(group.data) ? group.data : [group]; // fallback if no nested data
+          return inner.map((p, pi) => ({
+              ...p,
+              category: p.category || group.category || group.type || 'Other',
+              _key: `${group._id || gi}-${p._id || pi}`,
+          }));
+      });
+      
+      const rank = (c) => {
+          const i = categoryOrder.findIndex(o => norm(o) === norm(c));
+          return i === -1 ? 99 : i;
+      };
+      
+      const sortedProjects = [...allProjects].sort((a, b) => rank(a.category) - rank(b.category));
+      
+      const totalPages = Math.ceil(sortedProjects.length / itemsPerPage);
+      const paginatedData = sortedProjects.slice(
+          (currentPage - 1) * itemsPerPage,
+          currentPage * itemsPerPage
+      );
+      
+      console.log('groups:', groups.length, 'projects:', allProjects.length);
+      console.log('first group:', groups[0]);
 
     return (
         <>
@@ -172,55 +192,46 @@ const paginatedData = dataList.slice(
             </div>
         </section>
         <section className='proj' id='project'>
-            <div className='row flex'>
-                <div className='col-12'>
-                <h2>Project</h2>
+    <div className='row flex'>
+        <div className='col-12'>
+            <h2>Project</h2>
+
+            {loading ? (
+                <small>Loading...</small>
+            ) : error ? (
+                <small>Failed to load data. Please try again.</small>
+            ) : (
                 <div className="flex projPods">
-                {
-                    loading ? (<small>Loading...</small>) :
-                    error ? (
-                        <small>Failed to load data. Please try again.</small>
-                    ) :
-                paginatedData.map(item => (
-                <div key={item._id} id={item._id} className='podsProj'>
-                    {item.data.map(inner => (
-                        <div key={inner._id} className='podsContainer'>
-                            <a href={inner.link} className='linkPods' target="_blank" rel="noopener noreferrer"></a>
-                            <div className="imgContainer"><img src={inner.img} alt={inner.title} /></div>
-                            <div className="hoverDetails">
-                                <div>
-                                    <h3 className='titleProd'>{inner.title}</h3>
-                                    <p className='clickMe'>View</p>
+                    {paginatedData.map((inner, i) => (
+                        <React.Fragment key={inner._id}>
+                            {(i === 0 || paginatedData[i - 1].category !== inner.category) && (
+                                <h4 style={{ flexBasis: '100%', width: '100%', display: 'none' }}>{inner.category}</h4>
+                            )}
+                            <div className='podsProj'>
+                                <div className='podsContainer'>
+                                    <a href={inner.link} className='linkPods' target="_blank" rel="noopener noreferrer"></a>
+                                    <div className="imgContainer"><img src={inner.img} alt={inner.title} /></div>
+                                    <div className="hoverDetails">
+                                        <div>
+                                            <h3 className='titleProd'>{inner.title}</h3>
+                                            <p className='clickMe'>View</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </React.Fragment>
                     ))}
                 </div>
-            ))}
+            )}
 
-            {/* Pagination controls */}
             <div className="pagination">
-                <button
-                    onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
-                    disabled={currentPage === 1}
-                >
-                    Prev
-                </button>
+                <button onClick={() => setCurrentPage(p => Math.max(p - 1, 1))} disabled={currentPage === 1}>Prev</button>
                 <span>Page {currentPage} of {totalPages}</span>
-                <button
-                    onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
-                    disabled={currentPage === totalPages}
-                >
-                    Next
-                </button>
+                <button onClick={() => setCurrentPage(p => Math.min(p + 1, totalPages))} disabled={currentPage === totalPages}>Next</button>
             </div>
-                </div>
-                
-
-
-                </div>
-            </div>
-        </section>
+        </div>
+    </div>
+</section>
 
        </>
     )
