@@ -265,7 +265,7 @@ ul.expList em {
 }
 .podsProj {
     flex: 1 5 24%;
-    background: #ededee;
+    background: #c5c5c5;
     padding: 20px;
     position: relative;
     display:flex;
@@ -278,8 +278,8 @@ ul.expList em {
     mix-blend-mode: luminosity;
 }
 .imgContainer img {
-    object-fit: contain;
-    width: 72%;
+    object-fit: cover;
+    width: 100%;
     height: auto;
     margin: auto;
 }

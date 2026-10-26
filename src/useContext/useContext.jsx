@@ -16,9 +16,9 @@ export const UserProvider = ({ children }) => {
     const [currentUser, setCurrentUser] = useState(null);
     const [userLoggedIn, setUserLoggedIn] = useState(false);
     const [isEmailUser, setIsEmailUser] = useState(false);
-     const [isOpen, setIsOpen] = useState(false);
-        const [isActive, setIsActive] = useState('/');
-        const [isShrunk, setIsShrunk] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
+    const [isActive, setIsActive] = useState('/');
+    const [isShrunk, setIsShrunk] = useState(false);
 
 
     useEffect(() => {
@@ -67,6 +67,8 @@ export const UserProvider = ({ children }) => {
     
     const initialValue = {
         data,
+        error,
+        loading,
         setData,
         movieData,
         setMovieData,

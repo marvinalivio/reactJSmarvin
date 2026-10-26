@@ -15,7 +15,7 @@ import reactImg from '../assets/react.svg';
 import jsImg from '../assets/js.svg'
 
 const Page = () => {
-    const {data} =  Context();
+    const {data, loading, error} =  Context();
     const [currentPage, setCurrentPage] = useState(1);
     const itemsPerPage = 11;
     const navigate = useNavigate()
@@ -176,7 +176,12 @@ const paginatedData = dataList.slice(
                 <div className='col-12'>
                 <h2>Project</h2>
                 <div className="flex projPods">
-                {paginatedData.map(item => (
+                {
+                    loading ? (<small>Loading...</small>) :
+                    error ? (
+                        <small>Failed to load data. Please try again.</small>
+                    ) :
+                paginatedData.map(item => (
                 <div key={item._id} id={item._id} className='podsProj'>
                     {item.data.map(inner => (
                         <div key={inner._id} className='podsContainer'>
