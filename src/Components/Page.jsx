@@ -197,7 +197,7 @@ const Page = () => {
             <h2>Project</h2>
 
             {loading ? (
-                <small>Loading...</small>
+                <small>Connecting to the API...</small>
             ) : error ? (
                 <small>Failed to load data. Please try again.</small>
             ) : (
